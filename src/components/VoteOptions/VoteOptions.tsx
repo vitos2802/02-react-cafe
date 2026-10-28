@@ -1,12 +1,13 @@
 import css from './VoteOptions.module.css';
+import { type VoteType } from '../../types/votes';
 
 interface VoteOptionsProps {
   canReset: boolean;
-  onVote: (type: 'good' | 'neutral' | 'bad') => void;
+  onVote: (type: VoteType) => void;
   onReset: () => void;
 }
 
-export default function VoiteOptions({ onVote, onReset, canReset }: VoteOptionsProps) {
+export default function VoteOptions({ onVote, onReset, canReset }: VoteOptionsProps) {
   return (
     <>
       <div className={css.container}>
